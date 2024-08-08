@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#sample-files {
+    margin-bottom: 20px;
+    font-size: 12px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.sample-file-item {
+    margin-bottom: 5px;
+}
+
+#drop-zone {
+    border: 2px dashed #3498db;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    transition: background-color 0.3s;
+}
+
+#drop-zone.dragover {
+    background-color: #d5e5fa;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+#message {
+    margin-top: 15px;
+    color: #e74c3c;
+}

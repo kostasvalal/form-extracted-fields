@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Process Forms</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h3>Upload and Process Forms</h3>
+
+        <!-- Sample Files Selection -->
+        <div id="sample-files">
+            <h4>Select Sample Forms</h4>
+            {% for file in sample_files %}
+                <div class="sample-file-item">
+                    <input type="checkbox" name="sample_files" value="{{ file }}" id="sample-{{ loop.index }}">
+                    <label for="sample-{{ loop.index }}">{{ file }}</label>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Drag & Drop Area -->
+        <div id="drop-zone">Drag & Drop files here or click to select files</div>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="file-input" name="files[]" multiple style="display: none;">
+            <button type="submit" id="upload-button">Upload and Process</button>
+            <button type="button" id="download-button" disabled>Download Processed File</button>
+            <button type="button" id="new-upload-button" disabled>New Upload</button>
+            <p id="message"></p>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
